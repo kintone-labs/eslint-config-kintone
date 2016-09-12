@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config-kintone",
+  "version": "1.0.0",
+  "description": "ESLint config for kintone developers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.dev.cybozu.co.jp/ama-ch/eslint-config-kintone.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "ama-ch <amach97@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">= 3"
+  }
+}
