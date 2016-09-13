@@ -91,7 +91,6 @@ module.exports = {
             "error",
             30
         ],
-        "consistent-return": "error",
         "curly": [
             "error",
             "all"
