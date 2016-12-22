@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.dev.cybozu.co.jp/ama-ch/eslint-config-kintone.git"
+    "url": "git@github.com:kintone/eslint-config-kintone.git"
   },
   "keywords": [
     "eslint",
