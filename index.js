@@ -18,7 +18,8 @@ module.exports = {
         "swal": false,
         "Chart": false,
         "DOMPurify": false,
-        "Spinner": false
+        "Spinner": false,
+        "UltraDate": false
     },
     "rules": {
         "no-array-constructor": "error",
