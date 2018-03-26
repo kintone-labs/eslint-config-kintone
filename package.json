@@ -17,6 +17,6 @@
   "author": "ama-ch <amach97@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "eslint": ">= 3"
+    "eslint": ">= 4.2.0"
   }
 }

@@ -98,6 +98,8 @@ module.exports = {
         ],
         "eol-last": "error",
         "eqeqeq": "error",
+        "for-direction": "error",
+        "getter-return": "error",
         "indent": [
             "error",
             4,
@@ -137,6 +139,7 @@ module.exports = {
             "always"
         ],
         "semi-spacing": "error",
+        "semi-style": "error",
         "space-before-blocks": "error",
         "space-before-function-paren": [
             "error",
@@ -149,6 +152,7 @@ module.exports = {
             "error",
             "function"
         ],
+        "switch-colon-spacing": "error",
         "wrap-iife": [
             "error",
             "any"
