@@ -1,38 +1,43 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:8@sha256:4219ccbad0183162f3778ad43936b708f0eae50a6cfd87bc51790a6accd50f43
+version: 2.1
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+commands:
+  run-npm-test:
     steps:
       - checkout
-
       # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package-lock.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-
       - run: npm install
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
-
       # run tests!
       - run: npm run lint
       - run: npm test
+jobs:
+  node-v6:
+    docker:
+      - image: circleci/node:6@sha256:263ec29bc93d90443fc094e305437d6a42be707508dace108f171a6ded1d10e2
+    steps:
+      - run-npm-test
+  node-v8:
+    docker:
+      - image: circleci/node:8@sha256:8dc1d8ae2f295930fa165c36caab3c70cd8bee03c31f1205e1c45dfcdac68109
+    steps:
+      - run-npm-test
+  node-v10:
+    docker:
+      - image: circleci/node:10@sha256:76f874d78a6316a3f431b70b86f45016753454654b6af5558d1a56750c54f9ba
+    steps:
+      - run-npm-test
+
+workflows:
+  multiple_builds:
+    jobs:
+      - node-v6
+      - node-v8
+      - node-v10
