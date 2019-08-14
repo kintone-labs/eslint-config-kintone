@@ -1,3 +1,5 @@
+# ⚠️This package has been deprecated.Please use [@cybozu/eslint-config](https://github.com/cybozu/eslint-config) instead.
+
 # eslint-config-kintone
 
 [![npm version](https://badge.fury.io/js/eslint-config-kintone.svg)](https://badge.fury.io/js/eslint-config-kintone)
